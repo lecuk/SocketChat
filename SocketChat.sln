@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SocketChat_Server", "SocketChat_Server\SocketChat_Server.vcxproj", "{67BBB174-9857-415E-B40C-256EE9EEDDD3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{48D749B0-4F41-4561-93E7-21C9012D1FC4} = {48D749B0-4F41-4561-93E7-21C9012D1FC4}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SocketChat_Client", "SocketChat_Client\SocketChat_Client.vcxproj", "{BAF114AA-6BAE-4D07-84F0-44E58E670B26}"
+	ProjectSection(ProjectDependencies) = postProject
+		{67BBB174-9857-415E-B40C-256EE9EEDDD3} = {67BBB174-9857-415E-B40C-256EE9EEDDD3}
+		{48D749B0-4F41-4561-93E7-21C9012D1FC4} = {48D749B0-4F41-4561-93E7-21C9012D1FC4}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SocketChat_Framework", "SocketChat_Framework\SocketChat_Framework.vcxproj", "{48D749B0-4F41-4561-93E7-21C9012D1FC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67BBB174-9857-415E-B40C-256EE9EEDDD3}.Debug|x64.ActiveCfg = Debug|x64
+		{67BBB174-9857-415E-B40C-256EE9EEDDD3}.Debug|x64.Build.0 = Debug|x64
+		{67BBB174-9857-415E-B40C-256EE9EEDDD3}.Debug|x86.ActiveCfg = Debug|Win32
+		{67BBB174-9857-415E-B40C-256EE9EEDDD3}.Debug|x86.Build.0 = Debug|Win32
+		{67BBB174-9857-415E-B40C-256EE9EEDDD3}.Release|x64.ActiveCfg = Release|x64
+		{67BBB174-9857-415E-B40C-256EE9EEDDD3}.Release|x64.Build.0 = Release|x64
+		{67BBB174-9857-415E-B40C-256EE9EEDDD3}.Release|x86.ActiveCfg = Release|Win32
+		{67BBB174-9857-415E-B40C-256EE9EEDDD3}.Release|x86.Build.0 = Release|Win32
+		{BAF114AA-6BAE-4D07-84F0-44E58E670B26}.Debug|x64.ActiveCfg = Debug|x64
+		{BAF114AA-6BAE-4D07-84F0-44E58E670B26}.Debug|x64.Build.0 = Debug|x64
+		{BAF114AA-6BAE-4D07-84F0-44E58E670B26}.Debug|x86.ActiveCfg = Debug|Win32
+		{BAF114AA-6BAE-4D07-84F0-44E58E670B26}.Debug|x86.Build.0 = Debug|Win32
+		{BAF114AA-6BAE-4D07-84F0-44E58E670B26}.Release|x64.ActiveCfg = Release|x64
+		{BAF114AA-6BAE-4D07-84F0-44E58E670B26}.Release|x64.Build.0 = Release|x64
+		{BAF114AA-6BAE-4D07-84F0-44E58E670B26}.Release|x86.ActiveCfg = Release|Win32
+		{BAF114AA-6BAE-4D07-84F0-44E58E670B26}.Release|x86.Build.0 = Release|Win32
+		{48D749B0-4F41-4561-93E7-21C9012D1FC4}.Debug|x64.ActiveCfg = Debug|x64
+		{48D749B0-4F41-4561-93E7-21C9012D1FC4}.Debug|x64.Build.0 = Debug|x64
+		{48D749B0-4F41-4561-93E7-21C9012D1FC4}.Debug|x86.ActiveCfg = Debug|Win32
+		{48D749B0-4F41-4561-93E7-21C9012D1FC4}.Debug|x86.Build.0 = Debug|Win32
+		{48D749B0-4F41-4561-93E7-21C9012D1FC4}.Release|x64.ActiveCfg = Release|x64
+		{48D749B0-4F41-4561-93E7-21C9012D1FC4}.Release|x64.Build.0 = Release|x64
+		{48D749B0-4F41-4561-93E7-21C9012D1FC4}.Release|x86.ActiveCfg = Release|Win32
+		{48D749B0-4F41-4561-93E7-21C9012D1FC4}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4C6DEB0-BFC7-4A02-A194-4850F4B80253}
+	EndGlobalSection
+EndGlobal
