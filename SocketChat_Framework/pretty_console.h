@@ -35,6 +35,7 @@
 
 #define C_RESET				"\033[0m"
 #define C_UNDERSCORE		"\033[2m"
+#define C_BLINK				"\033[5m"
 
 #else
 

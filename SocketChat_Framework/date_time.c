@@ -6,6 +6,7 @@ struct tm *dateTime_construct(const int d, const int m, const int y)
 	if (d < 1 || d > dateTime_getMonthDayCount(m, y) || m < 1 || m > 12 || y < 1971 || y > 2100) return NULL; //check bounds
 
 	struct tm *t = malloc(sizeof(struct tm));
+	if (!t) return NULL;
 	t->tm_year = y - 1900;
 	t->tm_mon = m - 1;
 	t->tm_mday = d;

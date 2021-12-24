@@ -21,13 +21,15 @@
   <ItemGroup>
     <ClInclude Include="chat.h" />
     <ClInclude Include="color_support.h" />
-    <ClInclude Include="constants.h" />
     <ClInclude Include="date_time.h" />
     <ClInclude Include="error_printer.h" />
     <ClInclude Include="llist.h" />
     <ClInclude Include="message.h" />
     <ClInclude Include="pretty_console.h" />
+    <ClInclude Include="query.h" />
+    <ClInclude Include="response.h" />
     <ClInclude Include="tools.h" />
+    <ClInclude Include="update.h" />
     <ClInclude Include="user.h" />
     <ClInclude Include="id.h" />
     <ClInclude Include="WSA.h" />
@@ -37,7 +39,6 @@
     <ClCompile Include="date_time.c" />
     <ClCompile Include="error_printer.c" />
     <ClCompile Include="llist.c" />
-    <ClCompile Include="user.c" />
     <ClCompile Include="WSA.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -70,49 +70,45 @@ void llist_remove(LinkedList* list, const void* item)
 void llist_removeItem(LinkedList* list, const void* item)
 {
 	LinkedListNode* current = list->firstNode;
-	if (current)
+	LinkedListNode* previous = NULL;
+	while (current && current->item != item)
 	{
-		LinkedListNode* previous = NULL;
-		while (current && current->item != item)
-		{
-			previous = current;
-			current = current->nextNode;
-		}
-		if (previous)
-		{
-			previous->nextNode = current->nextNode;
-		}
-		else
-		{
-			list->firstNode = current->nextNode;
-		}
-		free(current);
-		list->count--;
+		previous = current;
+		current = current->nextNode;
 	}
+	if (!current) return;
+	if (previous)
+	{
+		previous->nextNode = current->nextNode;
+	}
+	else
+	{
+		list->firstNode = current->nextNode;
+	}
+	free(current);
+	list->count--;
 }
 
 void llist_removeValue(LinkedList* list, const void* valuePtr)
 {
 	LinkedListNode* current = list->firstNode;
-	if (current)
+	LinkedListNode* previous = NULL;
+	while (current && memcmp(current->item, valuePtr, list->itemSize))
 	{
-		LinkedListNode* previous = NULL;
-		while (current && !memcmp(current->item, valuePtr, list->itemSize))
-		{
-			previous = current;
-			current = current->nextNode;
-		}
-		if (previous)
-		{
-			previous->nextNode = current->nextNode;
-		}
-		else
-		{
-			list->firstNode = current->nextNode;
-		}
-		free(current);
-		list->count--;
+		previous = current;
+		current = current->nextNode;
 	}
+	if (!current) return;
+	if (previous)
+	{
+		previous->nextNode = current->nextNode;
+	}
+	else
+	{
+		list->firstNode = current->nextNode;
+	}
+	free(current);
+	list->count--;
 }
 
 bool llist_containsItem(const LinkedList* list, const void* item)

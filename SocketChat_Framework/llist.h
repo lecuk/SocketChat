@@ -87,4 +87,12 @@ void llist_clear(LinkedList* list);
 //Warning: You shouldn't delete items from list during iteration.
 #define llist_foreach(list, prefix) for (LinkedListNode* prefix##_node = list->firstNode; prefix##_node != NULL; prefix##_node = prefix##_node->nextNode)
 
+//Use this line to iterate through all items in a list. Use:
+//llist_foreach(list, type, iterator) { iterator... }
+//Warning: You shouldn't delete items from list during iteration.
+#define llist_foreach2(list, type, iterator) \
+for (LinkedListNode* iterator##_node = list->firstNode; iterator##_node != NULL; iterator##_node = iterator##_node->nextNode) \
+{ \
+	type iterator = iterator##_node->item;
+
 #endif

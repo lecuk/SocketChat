@@ -1,15 +1,14 @@
 #pragma once
 
+#include "id.h"
 #include "date_time.h"
 
-#define MESSAGE_SIZE 100
+#define MESSAGE_TEXT_LEN 100
 
 typedef struct sMessage
 {
 	short sender;
 	short receiver;
-	char text[MESSAGE_SIZE];
-	struct tm* timeSent;
+	char text[MESSAGE_TEXT_LEN];
+	struct tm timeSent;
 } Message;
-
-struct sMessage* message_create(short sender, short receiver, const char* text);
